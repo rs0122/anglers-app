@@ -16,7 +16,8 @@ class IndexController extends Controller
      */
     public function __invoke(Request $request)
     {
-        $fish_articles = FishArticle::all();
+        // $fish_articles = FishArticle::all();
+        $fish_articles = FishArticle::orderBy('created_at', 'DESC')->get();
         return view('fish_article.index')->with('fish_articles', $fish_articles);
     }
 }

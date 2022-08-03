@@ -15,6 +15,9 @@
             <label for="article-content">魚の説明</label>
             <span>200文字まで</span>
             <textarea id="article-content" type="text" name="fish_article" placeholder="魚の説明を登録"></textarea>
+            @error('fish_article')
+            <p style= "color: red;">{{ $message }}</p>
+            @enderror
             <button type="submit">投稿</button>
         </form>
     </div>
