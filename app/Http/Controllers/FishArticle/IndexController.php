@@ -1,8 +1,9 @@
 <?php
 
-namespace App\Http\Controllers\FishInformation;
+namespace App\Http\Controllers\FishArticle;
 
 use App\Http\Controllers\Controller;
+use App\Models\FishArticle;
 use Illuminate\Http\Request;
 
 class IndexController extends Controller
@@ -15,6 +16,7 @@ class IndexController extends Controller
      */
     public function __invoke(Request $request)
     {
-        //
+        $fish_articles = FishArticle::all();
+        return view('fish_article.index')->with('fish_articles', $fish_articles);
     }
 }

@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Controllers\FishInformation;
+namespace App\Http\Controllers\FishArticle;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Http\Requests\FishInformation\CreateRequest;
+use App\Http\Requests\FishArticle\CreateRequest;
 
 class CreateController extends Controller
 {

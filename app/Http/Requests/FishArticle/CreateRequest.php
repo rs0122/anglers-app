@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Requests\FishInformation;
+namespace App\Http\Requests\FishArticle;
 
 use Illuminate\Foundation\Http\FormRequest;
 
@@ -24,7 +24,7 @@ class CreateRequest extends FormRequest
     public function rules()
     {
         return [
-            'content' => 'required|max:140'
+            'fish_article' => 'required|max:200'
         ];
     }
 }
