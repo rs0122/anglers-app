@@ -16,3 +16,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/fish_information', \App\Http\Controllers\FishInformation\IndexController::class)->name('fish_information.index');
+Route::post('/fish_information/create', \App\Http\Controllers\FishInformation\CreateController::class)->name('fish_information.create');
