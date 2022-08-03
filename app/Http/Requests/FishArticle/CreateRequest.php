@@ -27,4 +27,9 @@ class CreateRequest extends FormRequest
             'fish_article' => 'required|max:200'
         ];
     }
+
+    public function fish_article(): string
+    {
+        return $this->input('fish_article');
+    }
 }
